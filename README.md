@@ -3,8 +3,9 @@
 
 If you are someone looking for a starter-kit that compiles your **SCSS to CSS**, Javascript <strong>ES6 to ES5</strong> and gets tired of <strong>reloading your browser</strong> everytime you save your code, this boilerplate might suit on you!
 
-_During 2016, I've been gathering some pieces of code that I find to be always useful on my next project. So I created a boilerplate that serves my needs and might serve yours._
+During 2016, I've been gathering some pieces of code that I find to be always useful on my next project. So I created this boilerplate that serves my needs and might serve yours.
 
+---
 
 ## What makes this boilerplate useful
 
@@ -28,7 +29,7 @@ _During 2016, I've been gathering some pieces of code that I find to be always u
 - Bonus: You can use **PHP** to help you build your HTML files. If you don't feel confortable with it, just use HTML as always.
 - Possibility to have CSS inline (only if you use php) _[Does it sound wrong?](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#dataURI)_
 
-
+---
 
 ## Table of contents
 - Getting started
@@ -38,6 +39,7 @@ _During 2016, I've been gathering some pieces of code that I find to be always u
 - Support
 - License
 
+---
 
 ## Geeting Started
 
@@ -83,6 +85,8 @@ Usually I write some basic PHP like `$variables` and `@foreach` to avoid repetin
 
 The php-cgi binary can be installed via [XAMPP](https://www.apachefriends.org/download.html). _[Check here](https://www.monosnap.com/image/psLZ5fpwuSsvJJeZPdklEjxMr)_ how you can add the binary to your PATH
 
+
+---
 
 
 ## Dealing with source files (js, scss, images)
@@ -133,7 +137,6 @@ The generated file includes vendor prefixes. Right now it supports _last 2 versi
 
 ```
 
----
 
 
 #### Javascript
@@ -180,6 +183,8 @@ For a while I used a plugin to compress images, but then I found some manual too
 - **[imageOptim](https://imageoptim.com/mac)** - app ~ 20% reduction
 
 
+---
+
 ## Boilerplate structure
 ```
 
@@ -220,6 +225,7 @@ gulp-boilerplate/
 
 ```
 
+---
 
 ## Bonus
 
@@ -254,10 +260,13 @@ In `index.html|php` you have some markup
 - `Schema` Tag @Type Website
 - [Fontawesome](http://wwww.fontawesome.io)
 
+---
 
 ## Support
 
 Any bug / suggestion / feedback you might have please let me know. In the future I plan to add some test scripts, probably with **[Intern](https://theintern.github.io)**.
+
+---
 
 ## License
 The code is available under the MIT License.
