@@ -92,7 +92,7 @@ The php-cgi binary can be installed via [XAMPP](https://www.apachefriends.org/do
 ---
 
 
-## Dealing with source files (js, scss, images)
+## Dealing with source files
 
 
 #### SCSS
