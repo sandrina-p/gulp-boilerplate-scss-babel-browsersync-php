@@ -1,0 +1,25 @@
+/*------------------------------------*\
+### TYPOGRAPHY   ###
+\*------------------------------------*/
+
+// if you need a font-face
+/*
+@font-face {
+    font-family: PolarisBook;
+    src: url(../path/to/your-font.woff);
+}
+*/
+
+p {
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+
+    &:focus {
+        outline: 1px solid $clr-black;
+    }
+}

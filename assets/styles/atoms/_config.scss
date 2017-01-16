@@ -1,0 +1,379 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+// Colors - use name-that-color. Why? --> https://davidwalsh.name/sass-color-variables-dont-suck
+// http://chir.ag/projects/name-that-color/#6195ED
+$clr-teal: #008080;
+$clr-cyprus: #004040;
+
+$clr-red: #ff0000;
+$clr-red-lighten45: lighten($clr-red, 45%);
+
+$clr-black: #000000;
+$clr-mineShaft: #222222;
+$clr-silverChalice: #AAAAAA;
+$clr-alto: #DDDDDD;
+$crl-alabaster: #F8F8F8;
+$crl-white: #FFFFFF;
+
+$speed: 250ms;
+
+@function rem($px) {
+    // 1rem --> 16px
+    // xrem --> $px
+    $rem: $px * 1rem / 16 ;
+    @return $rem;
+}
+
+@function em($px) {
+    // 1rem --> 16px
+    // xrem --> $px
+    $rem: $px * 1em / 16 ;
+    @return $rem;
+}
+
+$safeArea: rem(15);
+
+
+/*------------------------------------*\
+    Typography
+\*------------------------------------*/
+$fontXL: rem(24);
+$fontL: rem(18);
+$fontM: rem(16);
+$fontS: rem(13);
+$fontXS: rem(11);
+
+$lineHeightS: 1.2;
+$lineHeightM: 1.5;
+$lineHeightL: 1.7;
+
+$fReg: 300;
+$fMed: 400;
+$fBold: 700;
+
+$font-mono: monospace;
+$font-sans: sans-serif;
+
+/*------------------------------------*\
+    #MEDIA QUERIES
+\*------------------------------------*/
+
+//why EM instead of REM: https://zellwk.com/blog/media-query-units/
+$i4-height: em(440);
+$i5-height: em(470);
+$mobile-width: em(400);
+$phablet-width: em(500);
+$tablet-width: em(750);
+$laptop-width: em(950);
+$desktop-width: em(1450);
+
+
+@mixin media($media) {
+
+    @if $media == iphone4 {
+        @media (max-height: #{$i4-height}) {
+            @content;
+        }
+    }
+
+    @if $media == iphone5 {
+        @media (max-height: #{$i5-height}) {
+            @content;
+        }
+    }
+
+    @if $media == untilPhablet {
+        @media (max-width: #{$phablet-width - em(1)}) {
+            @content;
+        }
+    }
+
+    @if $media == untilTablet {
+        @media (max-width: #{$tablet-width - em(1)}) {
+            @content;
+        }
+    }
+
+    @if $media == untilLaptop {
+        @media (max-width: #{$laptop-width - em(1)}) {
+            @content;
+        }
+    }
+
+    @if $media == untilDesktop {
+        @media (max-width: #{$desktop-width - em(1)}) {
+            @content;
+        }
+    }
+
+    @if $media == mobile {
+        @media (min-width: $mobile-width) {
+            @content;
+        }
+    }
+
+    @if $media == phablet {
+        @media (min-width: $phablet-width) {
+            @content;
+        }
+    }
+
+    @if $media == tablet {
+        @media (min-width: $tablet-width) {
+            @content;
+        }
+    }
+
+    @if $media == laptop {
+        @media (min-width: $laptop-width) {
+            @content;
+        }
+    }
+
+    @if $media == desktop {
+        @media (min-width: $desktop-width) {
+            @content;
+        }
+    }
+
+    @if $media == onlyTablet {
+        @media (min-width: $tablet-width) and (max-width: #{$laptop-width - em(1)}) {
+            @content;
+        }
+    }
+}
+
+
+/*------------------------------------*\
+    #POSITION
+\*------------------------------------*/
+@mixin centerxy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centerx {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin centery {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/*------------------------------------*\
+    #CLEARFIX & FLEXBOX
+\*------------------------------------*/
+
+@mixin cf {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after { clear: both; }
+
+    &--l {
+        > * { float: left; }
+    }
+
+    &--r {
+        > * { float: right; }
+    }
+}
+
+@mixin flex($noflex:null) {
+
+    .flexbox & {
+        display: flex;
+
+        & > * { // prevent bugs on IE 10 11
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+
+            &:first-of-type:not(:last-of-type) {
+                margin-left: -1px; //fix safari bug http://stackoverflow.com/a/39692115/4737729
+            }
+        }
+    }
+
+    @if ($noflex) {
+        .no-flexbox & {
+            @include cf;
+        }
+    }
+}
+
+%cf {
+    @include cf;
+}
+
+%flex {
+    @include flex;
+}
+%noflex {
+    @include flex(true);
+}
+
+// @extend available on mobile query
+@include media(mobile) {
+    %flex-mob {
+        @include flex;
+    }
+
+    %flex-noflex-mob {
+        @include flex(true);
+    }
+
+    %cf-mob {
+        @include cf;
+    }
+}
+
+// @extend available on phablet query
+@include media(phablet) {
+    %flex-pha {
+        @include flex;
+    }
+
+    %flex-noflex-pha {
+        @include flex(true);
+    }
+
+    %cf-pha {
+        @include cf;
+    }
+}
+
+// @extend available on tablet query
+@include media(tablet) {
+    %flex-tab {
+        @include flex;
+    }
+
+    %noflex-tab {
+        @include flex(true);
+    }
+
+    %cf-tab {
+        @include cf;
+    }
+}
+
+// @extend available on laptop query
+@include media(laptop) {
+    %flex-lap {
+        @include flex;
+    }
+
+    %noflex-lap {
+        @include flex(true);
+    }
+
+    %cf-lap {
+        @include cf;
+    }
+}
+
+
+// modernizr class .flexbox || .no-flexbox
+@mixin flexProp {
+    .flexbox & {
+        @content;
+    }
+}
+
+@mixin noFlexProp {
+    .no-flexbox & {
+        @content;
+    }
+}
+
+/* example:
+.test {
+    @include flexProp {
+        padding: 15px;
+    };
+
+    @include noFlexProp {
+        padding: 10px;
+    };
+}
+output css
+.flexbox .test {
+    padding: 15px;
+}
+
+.no-flexbox .test {
+    padding: 10px;
+}
+*/
+
+
+/*------------------------------------*\
+    #CALC FALLBACK
+\*------------------------------------*/
+@mixin calc($prop, $valFallBack, $valCal) {
+    #{$prop}: $valFallBack; // poor browsers
+    #{$prop}: calc(#{$valCal});
+}
+// @include calc(width, 100%, 100% - #{$safeArea}/2);
+
+
+/*------------------------------------*\
+    #SUPPORT
+\*------------------------------------*/
+@mixin fallback($prop, $valFallBack, $val) {
+    #{$prop}: $valFallBack; // poor browsers
+    #{$prop}: $val;
+}
+// @include fallback(width, 100%, 100vh);
+
+
+
+/*------------------------------------*\
+    #IMG RETINA
+\*------------------------------------*/
+@mixin bgImg2x($file, $type) {
+  background-image: url($file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+        & {
+            background-image: url($file + '@2x.' + $type);
+        }
+  }
+}
+// ex: @include bgImg2x('../../media/images/passenger-back', jpg);
+
+
+/*------------------------------------*\
+    #PLACEHOLDER
+\*------------------------------------*/
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder {  @content; } /* IE 10+ */
+}
+
+/*
+input {
+    @include placeholder {
+        color: black;
+    }
+}
+*/

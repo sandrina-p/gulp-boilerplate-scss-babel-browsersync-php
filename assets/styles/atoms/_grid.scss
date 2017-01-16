@@ -1,0 +1,153 @@
+/*------------------------------------*\
+#GRIDS - @EXTEND-GRID CONCEPT
+\*------------------------------------*/
+
+/*------------------------------------*\
+I did a grid system with %placeholders,
+what contains "width: $x%"; Each one for each @media.
+
+That way you can @extend %col-x-y with no problems,
+and you don't create classes that aren't being used.
+
+You don't have elements with to many classes.
+For a better explanation read the footer
+
+%col-*      --> mobile first
+%colPha-*   --> @media >=phablet
+%colTab-*   --> @media >=tablet
+%colLap-*   --> @media >=laptop
+%colDes-*   --> @media >=desktop
+\*------------------------------------*/
+
+$columns: 12;
+@for $i from 1 through $columns {
+    %col-#{$i}-#{$columns} {
+        width: percentage($i / $columns);
+    }
+}
+
+$colDevices:    (OnlyPha, onlyPhablet),
+                (OnlyTa, onlyTablet),
+                (Mob, mobile),
+                (Pha, phablet),
+                (Tab, tablet),
+                (Lap, laptop),
+                (Des, desktop);
+
+@each $className, $media in $colDevices {
+    @include media($media) {
+        @for $i from 1 through $columns {
+            %col#{$className}-#{$i}-#{$columns} {
+                width: percentage($i / $columns);
+            }
+        }
+
+        //layout for 5 columns
+        @for $i from 1 through 5 {
+            %col#{$className}-#{$i}-5 {
+                width: percentage($i / 5);
+            }
+        }
+    }
+}
+
+/*------------------------------------*\
+Grid Offest
+if you need to use a grid % on something (ex padding)
+\*------------------------------------*/
+
+@mixin gridOS($prop, $col) {
+    //8 ------ 100
+    //$col --- @return
+    #{$prop}: percentage($col/$columns);
+}
+
+// .foo {
+//     @include grid8Prop(padding-right, 1);
+// }
+// output: padding-right: 12.5%;
+
+
+
+
+
+/*
+//EXAMPLE:
+
+From this:
+<div class="element0 col-xs-12 col-sm-6 col-md-3"></div>
+<div class="element1 col-xs-12 col-sm-6 col-md-3"></div>
+<div class="element2 col-xs-12 col-sm-6 col-md-3"></div>
+
+
+You'll have this:
+<div class="element el1"></div>
+<div class="element el2"></div>
+<div class="element el3"></div>
+
+
+#SCSS
+.elementGrid {
+    @extend %col-12-12;
+    @extend %colPha-6-12;
+    @extend %colTab-3-12;
+}
+
+
+.element0 {
+    //... some properties
+}
+
+.element1 {
+    //... some other properties
+}
+
+.element2 {
+    //... more properties
+}
+
+
+#CSS OUTPUT:
+
+.elementGrid {
+    width: 100%;
+}
+
+@media (min-width: 500px) {
+    .elementGrid {
+        width: 50%;
+    }
+}
+
+@media (min-width: 700px) {
+    .elementGrid {
+        width: 25%;
+    }
+}
+
+.element0 {
+    //... some properties
+}
+
+.element1 {
+    //... some other properties
+}
+
+.element2 {
+    //... more properties
+}
+
+
+===========
+
+This way you can better clean the HTML markup
+and organize better the CSS classes.
+
+This is just an idea/experiment that I like to apply on my projects
+to keep things simple without too much repetiton
+
+Some articles that explore the same concept:
+https://www.sitepoint.com/sass-semantically-extend-bootstrap/
+http://12devs.co.uk/articles/semantic-grids-with-sass-loops-and-silent-placeholders/
+
+*/

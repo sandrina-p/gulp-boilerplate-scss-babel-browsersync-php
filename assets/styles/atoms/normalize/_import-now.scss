@@ -1,0 +1,50 @@
+//@JohnAlbin https://github.com/JohnAlbin/normalize-scss
+// Import Now
+//
+// If you import this module directly, it will immediately output all the CSS
+// needed to normalize default HTML elements across all browsers.
+//
+// ```
+// @import "normalize/import-now";
+// ```
+
+@import 'normalize';
+@include normalize();
+
+
+// @sandrina-p
+html {
+    line-height: $lineHeightM;
+    font-family: $font-sans;
+    -webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+    color: $clr-mineShaft;
+
+    @include media(laptop) {
+        font-size: $fontM;
+    }
+
+    @include media(desktop) {
+        font-size: $fontL;
+    }
+
+	* {
+		box-sizing: inherit;
+		line-height: inherit;
+	}
+}
+
+body {
+    animation: fadein $speed;
+    background: $crl-alabaster;
+    font-size: $fontS;
+}
+
+@keyframes fadein {
+	0%  {opacity: 0;}
+	25%  {opacity: 0;}
+	100%  {opacity: 1;}
+}

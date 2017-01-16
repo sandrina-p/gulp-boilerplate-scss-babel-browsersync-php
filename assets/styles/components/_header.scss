@@ -1,0 +1,46 @@
+/*------------------------------------*\
+#CONTAINER
+\*------------------------------------*/
+.Container {
+    position: relative;
+    margin: auto;
+
+    &-main,
+    &-aside {
+        @extend %col-12-12;
+    }
+
+    &-main {
+        padding-bottom: $safeArea*3;
+    }
+}
+
+@include media(tablet) {
+    .Container {
+        padding: $safeArea;
+        &-main {
+            @extend %colTab-9-12;
+        }
+
+        &-aside {
+            @extend %colTab-3-12;
+            padding-left: $safeArea*2;
+            position: fixed;
+            right: $safeArea;
+        }
+    }
+}
+
+@include media(desktop) {
+    .Container {
+        padding: $safeArea*2;
+        &-main {
+            @extend %colDes-10-12;
+        }
+
+        &-aside {
+            @extend %colDes-2-12;
+            right: $safeArea*2;
+        }
+    }
+}

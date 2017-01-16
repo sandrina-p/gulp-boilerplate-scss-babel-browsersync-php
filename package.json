@@ -1,0 +1,39 @@
+{
+  "name": "boilerplate-gulp-babel-scss-browsersync-php",
+  "version": "1.0.0",
+  "description": "gulp php scss babel browserSync",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/sandrina-p/gulp-boilerplate-scss-babel-browsersync-php.git"
+  },
+  "author": "Sandrina Pereira",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015-script": "^1.1.0",
+    "browser-sync": "^2.18.6",
+    "chalk": "^1.1.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-include": "^2.3.1",
+    "gulp-php2html": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-multi-inheritance": "^1.0.2",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "yargs": "^6.6.0"
+  }
+}

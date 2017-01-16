@@ -1,0 +1,97 @@
+// -------- BUTTONS AND SIMILAR -------- //
+
+a, button {
+    &:focus {
+        animation-name: flash;
+        animation-duration: 250ms;
+        outline: 1px solid $clr-teal;
+        border: none;
+        box-shadow: 0;
+    }
+
+    &:disabled {
+        cursor: auto;
+    }
+}
+
+a, button {
+    &:focus a { //links inside
+        animation-name: flash;
+        animation-duration: 250ms;
+    }
+}
+
+// on click, it blinks. nice on mobile devices.
+@keyframes flash {
+    50%   {color: transparent; }
+}
+
+
+button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+
+    &:focus {
+        animation-name: flash;
+        animation-duration: 250ms;
+    }
+}
+
+
+
+%btnProps {
+    border: 1px solid;
+    border-radius: $safeArea;
+    display: inline-block;
+    font-family: $font-mono;
+    letter-spacing: 0.1px;
+    padding: $safeArea/3 $safeArea/2;
+    width: 100%;
+
+    &:focus,
+    &:hover {
+        border: 1px solid;
+    }
+
+}
+
+
+@mixin btn($bg, $bgDark, $txtClr, $txtHover:null) {
+    background-color: $bg;
+    box-shadow: 1px 0 1px $bgDark;
+    border-color: $bgDark;
+    color: $txtClr;
+
+    &:focus,
+    &:hover {
+        background-color: $bgDark;
+        box-shadow: 1px 1px 1px $bgDark;
+        border-color: $bgDark;
+
+        @if($txtHover) {
+            color: $txtHover;
+        }
+    }
+}
+
+
+$btn:
+    //(class, bgColor, bgHover, txtClr, txtClrHover)
+    ('light', $crl-white, $clr-alto, $clr-mineShaft),
+    ('cta', $clr-teal, $clr-silverChalice, $clr-alto, $clr-teal);
+
+
+.btn {
+    .btn {
+        @extend %btnProps;
+    }
+
+    @each $btnClass, $bg, $bgDark, $txtClr, $txtHover in $btn {
+        &-#{$btnClass} {
+            @include btn($bg, $bgDark, $txtClr, $txtHover);
+        }
+    }
+}
