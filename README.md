@@ -7,6 +7,8 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 
 ---
 
+> WIP :: Work in progress :: README and index.html and still under construction
+
 
 ## What makes this boilerplate useful
 
@@ -260,8 +262,6 @@ In `index.html|php` you have some markup
 - `<noscript>` tag
 - `Schema` Tag @Type Website
 - [Fontawesome](http://wwww.fontawesome.io)
-
-> WIP :: Work in progress - it's missing some stuff here.
 
 ---
 
