@@ -16,12 +16,12 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 - Compile and minify `*.scss` directly to `*.min.css` skiping the `*.css` file
 - Add the **[auto prefixers](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm)** for you. No more `-webkit-` on your SCSS.
 - BroswerSync - You don't need to reload your page to see the new SCSS you've just written.
-- It already has **Normalize**, some @mixins and [SCSS tricks]().
+- It already has **Normalize**, some @mixins and SCSS tricks.
 
 ##### Javascript
-- compile ES6 to ES5 with **Babel.js**
+- Compile ES6 to ES5 with **Babel.js**
 - **minify** `*.js` directly to `*.min.js`
-- You can divide you JS in partials like on SCSS
+- You can divide your JS in partials like in SCSS
 - Stripe what `console.log()` on production that everyone forgets about
 
 
@@ -29,7 +29,7 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 - **Minify** your HTML
 - It has some **Schema** and **Meta Tags** to help you on **SEO**
 - **[Fontawesome](http://www.fontawesome.io)** is included
-- Bonus: You can use **PHP** to help you build your HTML files. If you don't feel confortable with it, just use HTML as always.
+- Bonus: You can use **PHP** to help you build the HTML files. If you don't feel comfortable with it, just use HTML as always.
 - Possibility to have CSS inline (only if you use php) _[Does it sound wrong?](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#dataURI)_
 
 ---
