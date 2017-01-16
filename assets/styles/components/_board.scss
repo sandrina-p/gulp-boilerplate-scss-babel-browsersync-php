@@ -1,0 +1,57 @@
+/*------------------------------------*\
+#CONTAINER
+\*------------------------------------*/
+.Board {
+    width: 100vw;
+    min-height: 100vh;
+    line-height: $lineHeightL;
+    padding: $safeArea/2;
+
+    @include flex;
+    @include flexProp {
+        align-items: center;
+        justify-content: center;
+    };
+
+    @include noFlexProp {
+        @include centerxy;
+    };
+
+    &-in {
+        width: 100%;
+        max-width: rem(400);
+        border: $safeArea/3 solid $clr-teal;
+        border-left: 0;
+        border-right: 0;
+        padding: $safeArea 0;
+    }
+
+    &-title {
+        font-size: $fontXL;
+    }
+
+    &-p {
+        font-size: $fontM;
+        margin-top: $safeArea/2;
+    }
+
+    &-emoji {
+
+    }
+
+    &-footer {
+        display: block;
+        text-align: center;
+        border-top: 1px solid $clr-silverChalice;
+        margin-top: $safeArea;
+        padding-top: $safeArea;
+        text-transform: uppercase;
+        font-size: $fontXS;
+        letter-spacing: 0.5px;
+
+    }
+
+    @include media(tablet) {
+        padding: $safeArea;
+    }
+}

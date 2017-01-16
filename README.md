@@ -1,8 +1,8 @@
 # Gulp Boilerplate
 #### SCSS, Babel, PHP - HTML minify, BrowserSync and more
 
-If you are someone looking for a starter-kit that compiles your **SCSS to CSS**, Javascript **ES6 to ES5** and gets tired of **reloading your browser** everytime you save your code, this boilerplate might suit you!  
-During 2016, I've been gathering some pieces of code that I find to be always useful on my next project, so I ended by creating this boilerplate.
+If you are someone looking for a starter-kit that compiles your **SCSS to CSS**, Javascript **ES6 to ES5** and get tired of **reloading your browser** everytime you save your code, this boilerplate might suit you!  
+During 2016, I've been gathering some pieces of code that I find to be always useful on my next project, so I ended up by creating this boilerplate.
 
 ---
 
@@ -62,7 +62,7 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 
 
 ##### Gulp tasks available
-- `gulp watch` - this is what makes the magic while you code. It compiles your code and you don't need anymore to reload the page when saving your html or css files.
+- `gulp watch` - this is what makes the magic while you code. It compiles your code and you don't need to reload the page anymore when saving your html or css files.
 - `gulp build --production` - now that your code is ready, let's minify it (css, js and html) before going to production.
 
 

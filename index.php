@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>boilerplate#01 by sandrina-p</title>
+    <title>Gulp Boilerplate with scss Babel Browsersync and PHP by sandrina-p</title>
 
     <meta name='copyright' content='[copyright]'>
     <meta name='description' content='[keep it short, simple]'>
@@ -37,13 +37,13 @@
 
 
     <?php
-        $cssInline = true // extract css and put it inline on DOM. https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
-        $txtJsError = "We apologize, but some parts of the site might not work properly without JavaScript."
+        $cssInline = true; // extract css and put it inline on DOM. https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
+        $txtJsError = "We apologize, but some parts of the site might not work properly without JavaScript.";
     ?>
 
     <?php if ($cssInline) {  ?>
         <style>
-            <?php echo file_get_contents('assets/styles/04_templates/header.min.css') ?>
+            <?php echo file_get_contents('assets/styles/templates/header.min.css') ?>
         </style>
     <?php } else { ?>
         <link rel="stylesheet" href="assets/styles/templates/header.min.css">
@@ -87,28 +87,34 @@
         <div class="u-alert--error"> <?php echo $txtJsError ?> </div>
     </noscript>
 
-    <div>
-        <em>under construction</em>
-        <h1>Thanks for using me!</h1>
-        <p>Not sure what to do next? <a href="#">Check it here.</a> </p>
-        <p>Please feel free to use this boilerplate and modify it.<p>
+    <h1 class="sr-only">Gulp Boilerplate by sandrina</h1>
 
-        <p>Any bug / suggestion / feedback you might have, please let me know. I really appreciate it!</p>
-        <p>If you don't have anything to say at all, well... too bad ¯\_(ツ)_/¯</p>
+    <main>
+        <section class="Board">
+            <div class="Board-in">
+                <h2 class="Board-title">Thanks for using me!</h2>
+                <p class="Board-p">Feel free to use this boilerplate and modify it. Not sure what is this? <a href="https://gitlab.com/sandrina-p/gulp-boilerplate-scss-babel-browsersync-php/blob/master/README.md" class="link">Learn it here.</a><p>
 
-        <em>Have fun!</em>
-        <br>
-        TODO: add fontawesome, css inline, css script, style this page
-    </div>
+                <p class="Board-p">Any bug / suggestion / feedback you might have, please let me know. I'd really appreciate it!</p>
+                <p class="Board-p">If you don't have anything to say at all, well... have fun!</p>
+
+                <footer class="Board-footer">
+                    <a href="http://sandrina-p.net" href="_blank" class="link">sandrina-p</a> | <a href="https://gitlab.com/sandrina-p/gulp-boilerplate-scss-babel-browsersync-php/" href="_blank" class="link">Gitlab</a>
+                <footer>
+            </div>
+        </section>
+
+        <!-- end of Above the fold -->
+
+    </main>
 
 
     <?php // If you need to include a php file partial ?>
     <?php //include 'relative/path/to/partial.php'; ?>
 
-
     <?php //Styles Google way - https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery ?>
     <noscript>
-        <link rel="stylesheet" href="assets/styles/04_templates/index.min.css">
+        <link rel="stylesheet" href="assets/styles/templates/index.min.css">
     </noscript>
     <!--[if lt IE 9 || IE9]>
         <link rel="stylesheet" href="assets/styles/04_templates/index.min.css">
@@ -116,7 +122,7 @@
     <script>
         var cb = function() {
             var l = document.createElement('link'); l.rel = 'stylesheet';
-            l.href = 'assets/styles/04_templates/index.min.css';
+            l.href = 'assets/styles/templates/index.min.css';
             document.getElementsByTagName('head')[0].appendChild(l);
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;

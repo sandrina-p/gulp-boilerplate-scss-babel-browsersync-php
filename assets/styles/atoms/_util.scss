@@ -12,15 +12,9 @@ HELPERS / UTILITIES
     border: 0;
 }
 
-.cf {
-    @include cf;
-}
-
 .nowrap {
     white-space: nowrap;
 }
-
-
 
 %uAlert {
     width: 100%;

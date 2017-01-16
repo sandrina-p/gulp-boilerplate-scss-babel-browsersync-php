@@ -40,6 +40,14 @@ button {
     }
 }
 
+.link {
+    border-bottom: 1px dotted $clr-teal;
+    transition: $speed/2 ease-in;
+
+    &:hover {
+        color: $clr-teal;
+    }
+}
 
 
 %btnProps {
@@ -80,7 +88,7 @@ button {
 
 $btn:
     //(class, bgColor, bgHover, txtClr, txtClrHover)
-    ('light', $crl-white, $clr-alto, $clr-mineShaft),
+    ('light', $clr-white, $clr-alto, $clr-mineShaft),
     ('cta', $clr-teal, $clr-silverChalice, $clr-alto, $clr-teal);
 
 
