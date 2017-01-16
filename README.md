@@ -1,50 +1,50 @@
 # Gulp Boilerplate
-#### SCSS | Babel |  PHP - HTML minify | BrowserSync | and more
+#### SCSS, Babel, PHP - HTML minify, BrowserSync and more
 
-If you are someone looking for a starter-kit that compiles your **SCSS to CSS**, Javascript <strong>ES6 to ES5</strong> and gets tired of <strong>reloading your browser</strong> everytime you save your code, this boilerplate might suit on you!
-
-During 2016, I've been gathering some pieces of code that I find to be always useful on my next project. So I created this boilerplate that serves my needs and might serve yours.
+If you are someone looking for a starter-kit that compiles your **SCSS to CSS**, Javascript **ES6 to ES5** and gets tired of **reloading your browser** everytime you save your code, this boilerplate might suit you!  
+During 2016, I've been gathering some pieces of code that I find to be always useful on my next project, so I ended by creating this boilerplate.
 
 ---
-
-> WIP :: Work in progress :: README and index.html and still under construction
-
 
 ## What makes this boilerplate useful
 
 ##### SCSS
-- Compile and minify `*.scss` directly to `*.min.css` skiping the `*.css` file
-- Add the **[auto prefixers](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm)** for you. No more `-webkit-` on your SCSS.
-- BroswerSync - You don't need to reload your page to see the new SCSS you've just written.
-- It already has **Normalize**, some @mixins and SCSS tricks.
+- Compile and minify `*.scss` directly to `*.min.css` skipping the `*.css` file
+- Add **[auto prefixers](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm)** for you. No more `-webkit-` on your SCSS.
+- BroswerSync - You don't need to reload your page to see the new SCSS you've just written
+- Has **Normalize**, and some [SCSS configuration]().
 
 ##### Javascript
 - Compile ES6 to ES5 with **Babel.js**
 - **minify** `*.js` directly to `*.min.js`
-- You can divide your JS in partials like in SCSS
+- You can divide your JS in partials like you do on SCSS
 - Stripe what `console.log()` on production that everyone forgets about
 
 
 ##### HTML
 - **Minify** your HTML
 - It has some **Schema** and **Meta Tags** to help you on **SEO**
-- **[Fontawesome](http://www.fontawesome.io)** is included
-- Bonus: You can use **PHP** to help you build the HTML files. If you don't feel comfortable with it, just use HTML as always.
-- Possibility to have CSS inline (only if you use php) _[Does it sound wrong?](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#dataURI)_
+- **[Fontawesome 4.7](http://www.fontawesome.io)** is included
+- [You can use **PHP** to help you build the HTML files. If you don't feel comfortable with it, just use HTML as always.
+- Possibility to have CSS inline (_only_ if you use php) _[Does it sound wrong?](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#dataURI)_
 
 ---
 
 ## Table of contents
-- Getting started
-- Dealing with source files
-- Boilerplate structure
-- Bonus
-- Support
-- License
+- [Getting started](#getting-started)
+- [Dealing with source files](#dealing-with-source-files)
+- [Boilerplate structure](#boilerplate-structure)
+- [Bonus](#bonus)
+- [Support](#support)
+- [License](#license)
 
 ---
 
-## Geeting Started
+
+
+
+
+## Getting Started
 
 ##### Before you start *you need these installed*
 
@@ -70,7 +70,7 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 
 Usually I write some basic PHP like `$variables` and `@foreach` to avoid repeting HTML markup and other stuff like css-line. [php2html](https://www.npmjs.com/package/gulp-php2html) is the secret.
 
-##### OSX:
+###### OSX
 1. Install [Homebrew](http://brew.sh/)
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -84,7 +84,7 @@ Usually I write some basic PHP like `$variables` and `@foreach` to avoid repetin
   brew install php56
 ```
 
-##### WINDOWS
+###### WINDOWS
 
 The php-cgi binary can be installed via [XAMPP](https://www.apachefriends.org/download.html). _[Check here](https://www.monosnap.com/image/psLZ5fpwuSsvJJeZPdklEjxMr)_ how you can add the binary to your PATH
 
@@ -261,7 +261,7 @@ In `index.html|php` you have some markup
 - CSS inline (PHP only)
 - `<noscript>` tag
 - `Schema` Tag @Type Website
-- [Fontawesome](http://wwww.fontawesome.io)
+- [Fontawesome 4.7](http://wwww.fontawesome.io)
 
 ---
 
