@@ -99,7 +99,7 @@
                 <p class="Board-p">If you don't have anything to say at all, well... have fun!</p>
 
                 <footer class="Board-footer">
-                    <a href="http://sandrina-p.net" href="_blank" class="link">sandrina-p</a> | <a href="https://gitlab.com/sandrina-p/gulp-boilerplate-scss-babel-browsersync-php/" href="_blank" class="link">Gitlab</a>
+                    <a href="http://sandrina-p.net" href="_blank" class="link">sandrina-p</a> | <a href="https://github.com/sandrina-p/gulp-boilerplate-scss-babel-browsersync-php/" href="_blank" class="link">Github</a>
                 <footer>
             </div>
         </section>
