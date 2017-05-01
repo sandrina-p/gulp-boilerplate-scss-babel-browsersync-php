@@ -1,6 +1,7 @@
 // -------- BUTTONS AND SIMILAR -------- //
 
-a, button {
+a,
+button {
     &:focus {
         animation-name: flash;
         animation-duration: 250ms;
@@ -14,7 +15,8 @@ a, button {
     }
 }
 
-a, button {
+a,
+button {
     &:focus a { //links inside
         animation-name: flash;
         animation-duration: 250ms;
@@ -22,8 +24,9 @@ a, button {
 }
 
 // on click, it blinks. nice on mobile devices.
+
 @keyframes flash {
-    50%   {color: transparent; }
+    50% { color: transparent; }
 }
 
 
@@ -63,7 +66,6 @@ button {
     &:hover {
         border: 1px solid;
     }
-
 }
 
 
@@ -79,7 +81,7 @@ button {
         box-shadow: 1px 1px 1px $bgDark;
         border-color: $bgDark;
 
-        @if($txtHover) {
+        @if ($txtHover) {
             color: $txtHover;
         }
     }
@@ -87,7 +89,7 @@ button {
 
 
 $btn:
-    //(class, bgColor, bgHover, txtClr, txtClrHover)
+    // (class, bgColor, bgHover, txtClr, txtClrHover)
     ('light', $clr-white, $clr-alto, $clr-mineShaft),
     ('cta', $clr-teal, $clr-silverChalice, $clr-alto, $clr-teal);
 

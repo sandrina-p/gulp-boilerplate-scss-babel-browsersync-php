@@ -22,7 +22,7 @@ $speed: 250ms;
 @function rem($px) {
     // 1rem --> 16px
     // xrem --> $px
-    $rem: $px * 1rem / 16 ;
+    $rem: $px * 1rem / 16;
     @return $rem;
 }
 

@@ -11,11 +11,11 @@
     @include flexProp {
         align-items: center;
         justify-content: center;
-    };
+    }
 
     @include noFlexProp {
         @include centerxy;
-    };
+    }
 
     &-in {
         width: 100%;
@@ -35,10 +35,6 @@
         margin-top: $safeArea/2;
     }
 
-    &-emoji {
-
-    }
-
     &-footer {
         display: block;
         text-align: center;
@@ -48,7 +44,6 @@
         text-transform: uppercase;
         font-size: $fontXS;
         letter-spacing: 0.5px;
-
     }
 
     @include media(tablet) {

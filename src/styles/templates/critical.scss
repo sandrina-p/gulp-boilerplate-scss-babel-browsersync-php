@@ -1,9 +1,7 @@
-/*
-critical css that needs to be loaded Above The Fold
-Understanding Critical CSS -> https://www.smashingmagazine.com/2015/08/understanding-critical-css/
-
-ex: resets, header, hero, navigation...
-*/
+// critical css that needs to be loaded Above The Fold
+// Understanding Critical CSS -> https://www.smashingmagazine.com/2015/08/understanding-critical-css/
+//
+// ex: resets, header, hero, navigation...
 
 @import "../atoms/config";
 @import "../atoms/util";
