@@ -12,13 +12,15 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 - Compile and minify `*.scss` directly to `*.min.css` skipping the `*.css` file
 - Add **[auto prefixers](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm)** for you. No more `-webkit-` on your SCSS.
 - BroswerSync - You don't need to reload your page to see the new SCSS you've just written
-- Has **Normalize**, and some [SCSS configuration]().
+- Has **Normalize**, and some SCSS configuration
+- [StyleLint](https://simenb.github.io/stylint/)
 
 ##### Javascript
 - Compile ES6 to ES5 with **Babel.js**
 - **minify** `*.js` directly to `*.min.js`
 - You can divide your JS in partials like you do on SCSS
 - Stripe what `console.log()` on production that everyone forgets about
+- [EsLint](eslint.org)
 
 
 ##### HTML
@@ -69,7 +71,7 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 
 ##### Using PHP to generate HTML (optional)
 
-Usually I write some basic PHP like `$variables` and `@foreach` to avoid repeting HTML markup and other stuff like css-line. [php2html](https://www.npmjs.com/package/gulp-php2html) is the secret.
+Usually I write some basic PHP like `$variables` and `@foreach` to avoid repeting HTML markup and other stuff like css-line. [php2html](https://www.npmjs.com/package/gulp-php2html) is the secret. If you don't feel like that you can just delete `index.php` and use `index.html` as usually.
 
 ###### OSX
 1. Install [Homebrew](http://brew.sh/)
