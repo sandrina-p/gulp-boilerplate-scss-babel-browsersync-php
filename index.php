@@ -16,10 +16,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
-    <link rel="icon" type="image/png" href="assets/media/favicon16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="assets/media/favicon32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/media/favicon64.png" sizes="64x64">
-    <link rel="icon" type="image/png" href="assets/media/favicon180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="src/media/favicon16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="src/media/favicon32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="src/media/favicon64.png" sizes="64x64">
+    <link rel="icon" type="image/png" href="src/media/favicon180.png" sizes="180x180">
 
     <?php // twitter card ?>
 
@@ -27,13 +27,13 @@
     <meta name="twitter:site" content="[site url]" />
     <meta name="twitter:title" content="[site title]" />
     <meta name="twitter:description" content="[description]" />
-    <meta name="twitter:image" content="assets/media/card.png" />
+    <meta name="twitter:image" content="src/media/card.png" />
 
     <?php // Open Graph protocol (facebook card) ?>
     <meta property="og:title" content="[title]" />
     <meta property="og:type" content="[type]" />
     <meta property="og:url" content="[site url]" />
-    <meta property="og:image" content="assets/media/card.png" />
+    <meta property="og:image" content="src/media/card.png" />
 
 
     <?php
@@ -43,10 +43,10 @@
 
     <?php if ($cssInline) {  ?>
         <style>
-            <?php echo file_get_contents('assets/styles/templates/header.min.css') ?>
+            <?php echo file_get_contents('src/styles/templates/critical.min.css') ?>
         </style>
     <?php } else { ?>
-        <link rel="stylesheet" href="assets/styles/templates/header.min.css">
+        <link rel="stylesheet" href="src/styles/templates/critical.min.css">
     <?php } ?>
 </head>
 
@@ -103,9 +103,6 @@
                 <footer>
             </div>
         </section>
-
-        <!-- end of Above the fold -->
-
     </main>
 
 
@@ -114,15 +111,13 @@
 
     <?php //Styles Google way - https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery ?>
     <noscript>
-        <link rel="stylesheet" href="assets/styles/templates/index.min.css">
+        <link rel="stylesheet" href="src/styles/templates/index.min.css">
     </noscript>
-    <!--[if lt IE 9 || IE9]>
-        <link rel="stylesheet" href="assets/styles/04_templates/index.min.css">
-    <![endif]-->
+
     <script>
         var cb = function() {
             var l = document.createElement('link'); l.rel = 'stylesheet';
-            l.href = 'assets/styles/templates/index.min.css';
+            l.href = 'src/styles/templates/index.min.css';
             document.getElementsByTagName('head')[0].appendChild(l);
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
@@ -131,12 +126,12 @@
     </script>
 
 
-    <?php // fontawesome.io 4.7 ?>
+    <?php // Fontawesome.io 4.7 ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <?php //SCRIPTS ?>
-    <script defer src="assets/scripts/templates/index.min.js"></script>
+    <script defer src="src/scripts/templates/index.min.js"></script>
 </body>
 
 </html>
