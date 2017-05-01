@@ -52,9 +52,6 @@ gulp.task('default', function(){
         +'\n'+chTitle('gulp build')+'\n'
             +' run scripts, styles and html tasks and minify them.\n'
 
-        +'\n'+chTitle('gulp sprite')+'\n'
-            +' mount a sprite with svg/*.svg to be used with <use> tag.\n'
-
         +'\n'+chTitle('read /gulpfile.js to see other tasks')+'\n'
     );
 });
@@ -70,7 +67,7 @@ gulp.task('run-prod', function() {
 
 gulp.task('scripts', function(){
     console.log('start task scripts');
-    gulp.src([srcJs])
+    gulp.src(srcJs)
         .pipe(include())
         .pipe(babel({
             presets: ['es2015-script'],

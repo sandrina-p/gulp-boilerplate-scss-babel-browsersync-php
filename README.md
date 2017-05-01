@@ -54,16 +54,17 @@ During 2016, I've been gathering some pieces of code that I find to be always us
 
 ##### Set up
 
-0. Download or clone this repo
-1. `cd path/to/the/folder/you/just/downloaded`
+0. Download or clone this repo `git clone https://github.com/sandrina-p/gulp-boilerplate-scss-babel-browsersync-php.git`
+1. `cd gulp-boilerplate-scss-babel-browsersync-php`
 2. `npm install` - All dependecies you need to make this work will be installed on a new folder `/node_modules`. You can find those dependecies on `/package.json`
-3. `gulp watch`
+3. `gulp start`
 4. Go to http://localhost:3000/ and you are ready to rock!
 
 
 ##### Gulp tasks available
-- `gulp watch` - this is what makes the magic while you code. It compiles your code and you don't need to reload the page anymore when saving your html or css files.
-- `gulp build --production` - now that your code is ready, let's minify it (css, js and html) before going to production.
+- `gulp` - see what you can do with gulp
+- `gulp start` - this is what makes the magic while you code. It compiles your code and you don't need to reload the page anymore when saving your html or css files.
+- `gulp build` - now that your code is ready, let's minify it (css, js and html) before going to production.
 
 
 ##### Using PHP to generate HTML (optional)
