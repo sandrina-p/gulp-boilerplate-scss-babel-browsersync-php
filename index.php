@@ -42,6 +42,7 @@
     ?>
 
     <?php if ($cssInline) {  ?>
+        <!-- same as <link rel="stylesheet" href="src/styles/templates/critical.min.css"> but inline -->
         <style>
             <?php echo file_get_contents('src/styles/templates/critical.min.css') ?>
         </style>
