@@ -546,7 +546,7 @@ html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  color: #222222; }
+  color: #222; }
   @media (min-width: 59.375em) {
     html {
       font-size: 1rem; } }
@@ -559,7 +559,7 @@ html {
 
 body {
   animation: fadein 250ms;
-  background: #F8F8F8;
+  background: #F8F;
   font-size: 0.8125rem; }
 
 @keyframes fadein {
@@ -572,12 +572,12 @@ body {
 
 /*------------------------------------*### TYPOGRAPHY   ###
 \*------------------------------------*/
-/*
+/*-
 @font-face {
     font-family: PolarisBook;
     src: url(../path/to/your-font.woff);
 }
-*/
+-*/
 p {
   font-size: inherit; }
 
@@ -586,7 +586,7 @@ a {
   font-size: inherit;
   text-decoration: none; }
   a:focus {
-    outline: 1px solid #000000; }
+    outline: 1px solid #000; }
 
 a:focus,
 button:focus {
@@ -637,24 +637,24 @@ button {
     border: 1px solid; }
 
 .btn-light {
-  background-color: #FFFFFF;
-  box-shadow: 1px 0 1px #DDDDDD;
-  border-color: #DDDDDD;
-  color: #222222; }
+  background-color: #FFF;
+  box-shadow: 1px 0 1px #DDD;
+  border-color: #DDD;
+  color: #222; }
   .btn-light:focus, .btn-light:hover {
-    background-color: #DDDDDD;
-    box-shadow: 1px 1px 1px #DDDDDD;
-    border-color: #DDDDDD; }
+    background-color: #DDD;
+    box-shadow: 1px 1px 1px #DDD;
+    border-color: #DDD; }
 
 .btn-cta {
   background-color: #008080;
-  box-shadow: 1px 0 1px #AAAAAA;
-  border-color: #AAAAAA;
-  color: #DDDDDD; }
+  box-shadow: 1px 0 1px #AAA;
+  border-color: #AAA;
+  color: #DDD; }
   .btn-cta:focus, .btn-cta:hover {
-    background-color: #AAAAAA;
-    box-shadow: 1px 1px 1px #AAAAAA;
-    border-color: #AAAAAA;
+    background-color: #AAA;
+    box-shadow: 1px 1px 1px #AAA;
+    border-color: #AAA;
     color: #008080; }
 
 /*------------------------------------*#GRIDS - @EXTEND-GRID CONCEPT
@@ -677,8 +677,7 @@ For a better explanation read the footer
 /*------------------------------------*Grid Offest
 if you need to use a grid % on something (ex padding)
 \*------------------------------------*/
-/*
-//EXAMPLE:
+/*-EXAMPLE:
 
 From this:
 <div class="element0 col-xs-12 col-sm-6 col-md-3"></div>
@@ -756,7 +755,7 @@ Some articles that explore the same concept:
 https://www.sitepoint.com/sass-semantically-extend-bootstrap/
 http://12devs.co.uk/articles/semantic-grids-with-sass-loops-and-silent-placeholders/
 
-*/
+-*/
 /*------------------------------------*#CONTAINER
 \*------------------------------------*/
 .Board {
@@ -801,7 +800,7 @@ http://12devs.co.uk/articles/semantic-grids-with-sass-loops-and-silent-placehold
   .Board-footer {
     display: block;
     text-align: center;
-    border-top: 1px solid #AAAAAA;
+    border-top: 1px solid #AAA;
     margin-top: 0.9375rem;
     padding-top: 0.9375rem;
     text-transform: uppercase;

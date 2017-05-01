@@ -20,19 +20,21 @@ For a better explanation read the footer
 \*------------------------------------*/
 
 $columns: 12;
+
 @for $i from 1 through $columns {
     %col-#{$i}-#{$columns} {
         width: percentage($i / $columns);
     }
 }
 
-$colDevices:    (OnlyPha, onlyPhablet),
-                (OnlyTa, onlyTablet),
-                (Mob, mobile),
-                (Pha, phablet),
-                (Tab, tablet),
-                (Lap, laptop),
-                (Des, desktop);
+$colDevices:
+    (OnlyPha, onlyPhablet),
+    (OnlyTa, onlyTablet),
+    (Mob, mobile),
+    (Pha, phablet),
+    (Tab, tablet),
+    (Lap, laptop),
+    (Des, desktop);
 
 @each $className, $media in $colDevices {
     @include media($media) {
@@ -69,10 +71,7 @@ if you need to use a grid % on something (ex padding)
 
 
 
-
-
-/*
-//EXAMPLE:
+/*-EXAMPLE:
 
 From this:
 <div class="element0 col-xs-12 col-sm-6 col-md-3"></div>
@@ -150,4 +149,4 @@ Some articles that explore the same concept:
 https://www.sitepoint.com/sass-semantically-extend-bootstrap/
 http://12devs.co.uk/articles/semantic-grids-with-sass-loops-and-silent-placeholders/
 
-*/
+-*/

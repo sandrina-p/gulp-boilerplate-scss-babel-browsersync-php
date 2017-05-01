@@ -7,15 +7,15 @@
 $clr-teal: #008080;
 $clr-cyprus: #004040;
 
-$clr-red: #ff0000;
+$clr-red: #FF0;
 $clr-red-lighten45: lighten($clr-red, 45%);
 
-$clr-black: #000000;
-$clr-mineShaft: #222222;
-$clr-silverChalice: #AAAAAA;
-$clr-alto: #DDDDDD;
-$clr-alabaster: #F8F8F8;
-$clr-white: #FFFFFF;
+$clr-black: #000;
+$clr-mineShaft: #222;
+$clr-silverChalice: #AAA;
+$clr-alto: #DDD;
+$clr-alabaster: #F8F;
+$clr-white: #FFF;
 
 $speed: 250ms;
 
@@ -29,7 +29,7 @@ $speed: 250ms;
 @function em($px) {
     // 1rem --> 16px
     // xrem --> $px
-    $rem: $px * 1em / 16 ;
+    $rem: $px * 1em / 16;
     @return $rem;
 }
 
@@ -177,13 +177,13 @@ $desktop-width: em(1450);
 @mixin cf {
     *zoom: 1;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: "";
         display: table;
     }
 
-    &:after { clear: both; }
+    &::after { clear: both; }
 
     &--l {
         > * { float: left; }
@@ -195,7 +195,6 @@ $desktop-width: em(1450);
 }
 
 @mixin flex($noflex:null) {
-
     .flexbox & {
         display: flex;
 
@@ -224,6 +223,7 @@ $desktop-width: em(1450);
 %flex {
     @include flex;
 }
+
 %noflex {
     @include flex(true);
 }
@@ -348,14 +348,14 @@ output css
     #IMG RETINA
 \*------------------------------------*/
 @mixin bgImg2x($file, $type) {
-  background-image: url($file + '.' + $type);
+    background-image: url($file + '.' + $type);
 
-  @media (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
+    @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
         & {
             background-image: url($file + '@2x.' + $type);
         }
-  }
+    }
 }
 // ex: @include bgImg2x('../../media/images/passenger-back', jpg);
 
@@ -367,7 +367,7 @@ output css
     &::-webkit-input-placeholder { @content; }
     &:-moz-placeholder { @content; }
     &::-moz-placeholder { @content; }
-    &:-ms-input-placeholder {  @content; } /* IE 10+ */
+    &:-ms-input-placeholder { @content; } /* IE 10+ */
 }
 
 /*
